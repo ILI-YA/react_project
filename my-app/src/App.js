@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Switch, Route, Redirect} from "react-router-dom";
+import NotFoundPage from './Pages/NotFoundPage';
+import Welcome from './Pages/Welcome';
+import Profile from './Pages/Profile';
+import Game from './Pages/Game';
+import Congratulations from './Pages/Congratulations';
+import Records from './Pages/Records';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to="/welcome" />
+          </Route>
+
+          <Route path="/welcome" component={Welcome} /> 
+
+          <Route path="/profile" component={Profile} /> 
+
+          <Route path="/game" component={Game} /> 
+
+          <Route path="/congratulation" component={Congratulations} /> 
+
+          <Route path="/records" component={Records} /> 
+
+          <Route component={NotFoundPage} />
+        </Switch>
+      </div>
   );
 }
 
-export default App;
