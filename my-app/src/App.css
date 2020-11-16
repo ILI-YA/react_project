@@ -1,11 +1,157 @@
-.App {
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background:#0b8a07;
+}
+
+/* Welcome */
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lastWelcome {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.firstWelcome {
+  text-align: center;
 }
+
+.input {
+  width: 150px;
+  margin: 5px 3px;
+  border: 1px solid #cecece;
+  border-radius: 3px;
+  background: #F6F6f6;
+  cursor: pointer;
+}
+
+#email {
+  margin-left: 33px;
+}
+
+img {
+  width: 150px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.select {
+  cursor: pointer;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card1 {
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  background: url(./img/card1.png);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card2 {
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  background: url(./img/card2.png);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card3 {
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  background: url(./img/card3.png);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view {
+  opacity: 0;
+  border-radius: 5px;
+}
+
+.view:hover {
+  opacity: 1;
+}
+
+.rules {
+  width: 50%;
+  text-align: center;
+}
+
+.start {
+  width: 300px;
+  padding: 10px;
+  margin: 20px;
+  font-size: 18px;
+  color: #cecece;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #8e2de2, #4a00e0);
+  cursor: pointer;
+}
+
+.quit {
+  width: 100px;
+  color: #cecece;
+  border-radius: 20px;
+  background: dimgray;
+  cursor: pointer;
+}
+
+.quit:hover {
+  width: 120px;
+  font-size: 18px;
+}
+
+/* Game */
+
+.game{
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 100px;
+}
+
+.playField{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  background: url(./img/card1.png);
+  cursor: pointer;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
